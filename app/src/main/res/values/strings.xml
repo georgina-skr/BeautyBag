@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Beauty Bag</string>
+    <string name="stats">Stats</string>
+    <string name="my_bag">My Bag</string>
+    <string name="add_item">Add Product</string>
+    <string name="todo">TODO</string>
+</resources>

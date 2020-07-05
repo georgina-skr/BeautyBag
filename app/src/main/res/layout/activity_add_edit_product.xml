@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEditProduct">
+
+    <Button
+        android:id="@+id/AddEdit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="10"
+        android:onClick="addEditRecord"
+        android:text="Add Product"
+        android:textColor="@color/cardview_light_background"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:text="Product Name*"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextName"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:maxLength="20"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewPrice"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewName" />
+
+    <TextView
+        android:id="@+id/TextViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:text="Product Price*"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPrice"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <EditText
+        android:id="@+id/editTextPrice"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewPurDate"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewPrice" />
+
+    <TextView
+        android:id="@+id/TextViewPurDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:text="Purchase Date*"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonPurDate"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrice" />
+
+    <Button
+        android:id="@+id/ButtonPurDate"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_menu_my_calendar"
+        android:ems="10"
+        android:shadowColor="#008577"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewExpDate"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrice"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <TextView
+        android:id="@+id/TextViewPurchaseDate"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Select Purchase Date from calendar"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/ButtonPurDate"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonPurDate"
+        app:layout_constraintTop_toTopOf="@+id/ButtonPurDate" />
+
+    <TextView
+        android:id="@+id/TextViewExpDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:text="Expiry Date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonExpDate"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonPurDate" />
+
+    <Button
+        android:id="@+id/ButtonExpDate"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_menu_my_calendar"
+        android:ems="10"
+        android:shadowColor="#008577"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewEndDate"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewExpDate"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <TextView
+        android:id="@+id/TextViewExpiryDate"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Select Expiry Date from calendar"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/ButtonExpDate"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonExpDate"
+        app:layout_constraintTop_toTopOf="@+id/ButtonExpDate" />
+
+    <TextView
+        android:id="@+id/TextViewEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:text="End Date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonEndDate"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonExpDate" />
+
+    <Button
+        android:id="@+id/ButtonEndDate"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_menu_my_calendar"
+        android:ems="10"
+        android:shadowColor="#008577"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewCategory"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewEndDate"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <TextView
+        android:id="@+id/TextViewEnterEndDate"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Select End Date from calendar"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/ButtonEndDate"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonEndDate"
+        app:layout_constraintTop_toTopOf="@+id/ButtonEndDate" />
+
+
+    <ImageView
+        android:id="@+id/imageViewDislike"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
+        android:onClick="dislikeProduct"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLike"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLike"
+        app:srcCompat="@drawable/ic_no_thumb_down" />
+
+    <ImageView
+        android:id="@+id/imageViewLike"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
+        android:onClick="likeProduct"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewDislike"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toTopOf="@+id/editTextName"
+        app:srcCompat="@drawable/ic_no_thumb_up" />
+
+    <ImageView
+        android:id="@+id/imageViewReminder"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="setReminder"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/TextViewExpiryDate"
+        app:layout_constraintTop_toTopOf="@+id/TextViewExpiryDate"
+        app:srcCompat="@drawable/ic_notifications_off" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline">
+
+        <RadioButton
+            android:id="@+id/radioButtonFace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="categoryProduct"
+            android:paddingHorizontal="5dp"
+            android:text="Face"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonUpperBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="categoryProduct"
+            android:paddingHorizontal="5dp"
+            android:text="Upper Body"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBottomBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="categoryProduct"
+            android:text="Bottom Body"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/TextViewCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Category: *"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupCategory"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Add New Product"
+        app:titleMarginStart="40dp"
+        tools:ignore="MissingConstraints">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.9294404" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

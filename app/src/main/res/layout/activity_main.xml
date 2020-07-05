@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonMyBag"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="108dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#C4456F"
+        android:text="@string/my_bag"
+        android:onClick="myBagProducts"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+
+    <Button
+        android:id="@+id/buttonAddItem"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="108dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#C4456F"
+        android:text="@string/add_item"
+        android:onClick="addNewItem"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMyBag" />
+
+    <Button
+        android:id="@+id/buttonStats"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="108dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#C4456F"
+        android:onClick="showStats"
+        android:text="@string/stats"
+        app:layout_constraintBottom_toTopOf="@+id/imageBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddItem" />
+
+    <ImageView
+        android:id="@+id/imageBottom"
+        android:layout_width="192dp"
+        android:layout_height="184dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStats"
+        app:srcCompat="@drawable/brush" />
+
+    <ImageView
+        android:id="@+id/imageBottom2"
+        android:layout_width="162dp"
+        android:layout_height="197dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageBottom"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStats"
+        app:srcCompat="@drawable/brushes" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="337dp"
+        android:layout_height="228dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_transparentbb"
+        tools:contentDescription="@string/todo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
